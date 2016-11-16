@@ -1,0 +1,29 @@
+<div class = "container">
+  <div class="form-div">
+    <div class="row">
+      <div class="col-lg-6">
+        <%= form_tag home_dashboard_path, method: :get do %>
+          <%= text_field_tag :tweet %>
+          <%= submit_tag 'Search' %>
+        <% end %>
+      </div>
+      <div class="col-lg-6">
+        <table class='table-trd'>
+          <tr>
+            <td>Number of unique users tweeting the same keyword: </td>
+            <td><%= @no_of_unique_users %></td>
+          </tr>
+          <tr>
+            <td>Number of tweets: </td>
+            <td><%= @no_of_tweets %></td>
+          </tr>
+          <tr>
+            <td>Number of retweets: </td>
+            <td><%= @no_of_retweets %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,5 @@
+development:
+  adapter: mysql2
+  database: twitter_db
+  username: root
+  password: root

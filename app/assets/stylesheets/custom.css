@@ -1,0 +1,28 @@
+body,html {
+  background-color:#231f20;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  color:#FFFFFF;
+}
+#top{
+  max-height: 1000px;
+  max-width: 1000px;
+  position: relative;
+}
+.form-div{
+  padding-top: 100px;
+  padding-left: 100px;
+}
+.table-trd {
+  width:100%;
+  table-layout: fixed;
+  font-size:14px;
+}
+.report{
+  padding-top: 50px;
+  max-height:94500px;
+}
+.tweet, .retweet, .tweet_date {
+  display: none;
+}
