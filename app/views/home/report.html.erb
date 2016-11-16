@@ -21,12 +21,38 @@
     </tr>
   </table>
   <table>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.user.screen_name %>
-        <%= tweet.text %>
-        <%= tweet.created_at %></td>
-      </tr>
-    <% end %>
+    <tr>
+      <th>Username</th>
+      <th>Tweet</th>
+      <th>Retweet</th>
+      <th>Date</th>
+    </tr>
+    <% if @tweets %>
+      <% @tweets.each do |tweet| %>
+        <tr>
+          <td><%= tweet.user.screen_name %></td>
+          <td><%= tweet.text %></td>
+          <td><%= tweet.retweeted_status.text %></td>
+          <td><%= tweet.created_at %></td>
+        </tr>
+      <% end %>
+    <% end%>
   </table>
 </div>
+<script type="text/javascript">
+      $(function(){
+        $("#filter").on('click', function(){
+          var id = $(this).val();
+          if(id == "1") {
+            $('.tweet').show();
+            $('.tweet_date').hide();
+          } else if(id == "2") {
+            $('.tweet').show();
+            $('.tweet_date').hide();
+          } else {
+            $('.tweet_date').show();
+            $('.tweet').hide();
+          }
+        });
+      });
+    </script>

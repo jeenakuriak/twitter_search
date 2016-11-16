@@ -1,8 +1,8 @@
 body,html {
-  background-color:#231f20;
+  /*background-color:#231f20;*/
   padding: 0;
   margin: 0;
-  height: 100%;
+  max-height: 94500px;
   color:#FFFFFF;
 }
 #top{
@@ -21,7 +21,6 @@ body,html {
 }
 .report{
   padding-top: 50px;
-  max-height:94500px;
 }
 .tweet, .retweet, .tweet_date {
   display: none;
