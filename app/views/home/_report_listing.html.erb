@@ -1,0 +1,36 @@
+<%if !params[:tweet].blank?%>
+  <table>
+    <h4>Tweets</h4>
+    <% if @tweets %>
+      <% @tweets.each do |tweet| %>
+        <tr>
+          <td><%= tweet %></td>
+        </tr>
+      <% end %>
+    <% end%>
+  </table>
+<%end%>
+<%if !params[:retweet].blank?%>
+  <table>
+    <h4>Retweets</h4>
+    <% if @retweets %>
+      <% @retweets.each do |retweet| %>
+        <tr>
+          <td><%= retweet %></td>
+        </tr>
+      <% end %>
+    <% end%>
+  </table>
+<%end%>
+<%if !params[:tweet_date].blank?%>
+  <table>
+    <h4>Tweet by date</h4>
+    <% if @tweet_by_date %>
+      <% @tweet_by_date.each do |tweet| %>
+        <tr>
+          <td><%= tweet["text"] %></td>
+        </tr>
+      <% end %>
+    <% end%>
+  </table>
+<%end%>

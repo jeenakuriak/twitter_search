@@ -9,6 +9,10 @@
             <%= label_tag "Tweet"%>
             <%= text_field_tag :tweet, params[:tweet] %>
           </div>
+          <div class="retweet">
+            <%= label_tag "Retweet"%>
+            <%= text_field_tag :retweet, params[:retweet] %>
+          </div>
           <div class="tweet_date">
             <%= label_tag "Tweet by Date"%>
             <%= date_field_tag :tweet_date %>
@@ -20,24 +24,7 @@
       <%end%>
     </tr>
   </table>
-  <table>
-    <tr>
-      <th>Username</th>
-      <th>Tweet</th>
-      <th>Retweet</th>
-      <th>Date</th>
-    </tr>
-    <% if @tweets %>
-      <% @tweets.each do |tweet| %>
-        <tr>
-          <td><%= tweet.user.screen_name %></td>
-          <td><%= tweet.text %></td>
-          <td><%= tweet.retweeted_status.text %></td>
-          <td><%= tweet.created_at %></td>
-        </tr>
-      <% end %>
-    <% end%>
-  </table>
+  <%= render 'report_listing'%>
 </div>
 <script type="text/javascript">
       $(function(){
@@ -45,13 +32,16 @@
           var id = $(this).val();
           if(id == "1") {
             $('.tweet').show();
+            $('.retweet').hide();
             $('.tweet_date').hide();
           } else if(id == "2") {
-            $('.tweet').show();
+            $('.retweet').show();
+            $('.tweet').hide();
             $('.tweet_date').hide();
           } else {
             $('.tweet_date').show();
             $('.tweet').hide();
+            $('.retweet').hide();
           }
         });
       });
