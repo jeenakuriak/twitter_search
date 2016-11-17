@@ -29,8 +29,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Twitter Search API
 gem 'twitter'
 gem 'oauth'
-gem 'httparty', '0.11.0'
-gem 'jsonpath', '0.5.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

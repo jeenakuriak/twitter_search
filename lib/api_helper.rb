@@ -1,6 +1,4 @@
 class ApiHelper
-  include HTTParty
-  require 'jsonpath'
   attr_accessor :response, :path, :current_user
 
   def initialize(current_user)
