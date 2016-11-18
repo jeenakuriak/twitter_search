@@ -22,6 +22,6 @@ body,html {
 .report{
   padding-top: 50px;
 }
-.tweet, .retweet, .tweet_date {
+#twet, #retwet, #twet_date {
   display: none;
 }

@@ -13,5 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
 //= require_tree .
+
+$(function(){
+  $("#filter").on('click', function(){
+    var id = $(this).val();
+    if(id == "1") {
+      $('#twet').show();
+      $('#retwet').hide();
+      $('#twet_date').hide();
+    } else if(id == "2") {
+      $('#retwet').show();
+      $('#twet').hide();
+      $('#twet_date').hide();
+    } else {
+      $('#twet_date').show();
+      $('#twet').hide();
+      $('#retwet').hide();
+    }
+  });
+});
