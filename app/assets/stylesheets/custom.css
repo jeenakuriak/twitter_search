@@ -5,14 +5,22 @@ body,html {
   max-height: 94500px;
   color:#FFFFFF;
 }
+.dash-bdy{
+  min-height:235px;
+  /*background-color:#333333;*/
+  margin-top: 90px;
+  border:solid 2px #000000;
+  width: 72%;
+  margin-left: 170px;
+  max-height:94500px;}
 #top{
   max-height: 1000px;
   max-width: 1000px;
   position: relative;
 }
 .form-div{
-  padding-top: 100px;
-  padding-left: 100px;
+  padding-top: 50px;
+  padding-left: 30px;
 }
 .table-trd {
   width:100%;
@@ -21,6 +29,7 @@ body,html {
 }
 .report{
   padding-top: 50px;
+  padding-left: 30px;
 }
 #twet, #retwet, #twet_date {
   display: none;
