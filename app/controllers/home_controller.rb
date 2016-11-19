@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   private
   def get_tweets(params)
     if params[:tweet]
-      path = "https://api.twitter.com/1.1/search/tweets.json?q=#{params[:tweet]}"
+      path = "https://api.twitter.com/1.1/search/tweets.json?q=#{params[:tweet]}&result_type=popular"
       api_helper = ApiHelper.new(current_user)
       @tweet_results = api_helper.call_method('get', path)
       @tweets = []
@@ -26,7 +26,7 @@ class HomeController < ApplicationController
       @tweet_results.map do |tweet|
         @tweet_user << tweet["user"]["id"]
         @tweets << tweet["text"]
-        @retweets << tweet["retweeted_status"]["text"] if tweet["retweeted_status"]
+        @retweets << tweet["retweeted_status"]["text"] if tweet["retweeted"]
       end
     end
   end
